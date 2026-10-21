@@ -20,6 +20,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     color: var(--text);
@@ -182,6 +183,39 @@
   }
   .orcid:hover { text-decoration: underline; }
 
+
+  /* ---- Nav ---- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26, 58, 74, 0.97);
+    backdrop-filter: blur(8px);
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+  }
+  @media (max-width: 600px) {
+    .nav a { font-size: 0.75rem; padding: 0.3rem 0.6rem; }
+  }
+
   /* ---- Footer ---- */
   footer {
     text-align: center;
@@ -206,6 +240,17 @@
     <a class="orcid" href="https://orcid.org/0009-0006-8750-7630" target="_blank" rel="noopener">iD 0009-0006-8750-7630</a>
   </div>
 </header>
+
+
+<nav class="nav">
+  <a href="#education">Education</a>
+  <a href="#research">Research</a>
+  <a href="#professional">Professional</a>
+  <a href="#presentations">Presentations</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#skills">Skills</a>
+  <a href="#about">About</a>
+</nav>
 
 <div class="container">
 
